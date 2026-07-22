@@ -289,12 +289,16 @@ Projects
     </div>
 
      <h3>
-        Fleet Driver Identification over BLE
+        STM32WB55-Based BLE Gateway for Fleet Management System Modernization
     </h3>
 
     <p>
-       Designed and implemented an embedded BLE authentication gateway based on STM32WB55 to replace physical driver identification while ensuring compatibility with an existing fleet management infrastructure. Implemented BLE GATT services, UART communication with the GPS module, and embedded firmware for secure wireless driver authentication.
-    </p>
+       Developed a BLE gateway prototype to modernize an existing fleet management system by introducing smartphone-based driver identification and wireless GPS data exchange.
+
+The solution uses an STM32WB55 microcontroller as a communication bridge between a mobile application and the existing fleet management device through BLE and UART interfaces.
+
+Custom BLE GATT services were designed for driver authentication and GPS location notification, with BLE security mechanisms implemented using Passkey Entry and Security Manager functionalities.
+</p>
 
     <ul class="features">
         <li>✔ BLE GATT Services</li>
@@ -330,18 +334,23 @@ Projects
     </div>
 
     <h3>
-        BLE Health Monitoring Embedded Node
+       BLE-Enabled Health Monitoring Embedded Node with Wireless Protocol Analysis
     </h3>
 
     <p>
-        Designed and developed an ESP32-C3 BLE embedded node for health monitoring, integrating heart rate acquisition, actuator control and wireless communication with a mobile BLE central. Implemented custom BLE GATT services using ESP-IDF/NimBLE and analyzed BLE packets with Wireshark for debugging and protocol validation.
-    </p>
+        Developed an embedded BLE health monitoring prototype based on an ESP32-C3 microcontroller, integrating heart rate acquisition, LCD visualization, and remote actuator control.
+
+Designed custom BLE GATT services to enable smartphone-based interaction using nRF Connect, allowing remote servo motor control and real-time heart rate data monitoring.
+
+The project was extended with BLE packet sniffing using an nRF51 dongle and Wireshark to analyze wireless communication frames and understand BLE protocol exchanges.
+</p>
 
     <ul class="features">
         <li>✔ BLE GATT Communication</li>
         <li>✔ Heart Rate Acquisition</li>
         <li>✔ Embedded Peripheral Control</li>
         <li>✔ BLE Packet Analysis</li>
+
     </ul>
 
     <div class="tech">
@@ -351,6 +360,7 @@ Projects
         <span>Embedded C</span>
         <span>NimBLE • </span>
         <span>Wireshark</span>
+        <span>nRF51 Dongle</span>
     </div>
 
     <a href="https://github.com/Olfa-Ameur/IoT-BLE-Health-Monitoring-Node-with-ESP32"

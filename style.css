@@ -1,0 +1,959 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+:root{
+
+    --background:#F7F5F2;
+
+    --surface:#FFFFFF;
+
+    --primary:#0F4C5C;
+
+    --secondary:#2A9D8F;
+
+    --accent:#E9C46A;
+
+    --text:#22333B;
+
+    --text-light:#667085;
+
+    --border:#E7E5E4;
+
+    --shadow:0 20px 60px rgba(15,76,92,0.12);
+
+}
+
+
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+header{
+
+    padding:30px 10%;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.logo{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+}
+
+
+
+.logo span{
+
+    color:var(--secondary);
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-weight:500;
+
+    transition:0.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.profile-card{
+
+    width:350px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+
+
+.profile-card img{
+
+    width:260px;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid var(--background);
+
+}
+
+
+
+.profile-tags{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+
+
+.profile-tags span{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+
+
+.profile-tags span:nth-child(2){
+
+    background:var(--secondary);
+
+}
+
+
+
+.profile-tags span:nth-child(3){
+
+    background:var(--accent);
+
+    color:var(--text);
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+
+.buttons{
+
+    margin-top:40px;
+
+}
+
+
+
+.btn,
+.btn-outline{
+
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    margin-right:15px;
+
+    transition:0.3s;
+
+}
+
+
+
+.btn{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+.btn:hover{
+
+    background:var(--secondary);
+
+}
+
+
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+
+/* =========================
+   HERO TECHNOLOGY CARD
+========================= */
+
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.hero-image img{
+
+    width:380px;
+
+    height:380px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+
+/* =========================
+   LEARNING JOURNEY
+========================= */
+
+
+.learning-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.learning-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    transition:0.3s;
+
+}
+
+
+
+.learning-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.number{
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:var(--accent);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.learning-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.learning-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+
+
+
+.learning-tags{
+
+    margin-top:25px;
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.learning-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+
+section{
+
+    padding:90px 10%;
+
+}
+
+
+
+section h2{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:50px;
+
+    position:relative;
+
+}
+
+
+
+section h2::after{
+
+    content:"";
+
+    width:60px;
+
+    height:4px;
+
+    background:var(--accent);
+
+    position:absolute;
+
+    bottom:-15px;
+
+    left:0;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+
+.about-box{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.about-box p{
+
+    font-size:19px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   TECHNICAL EXPERTISE
+========================= */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    align-items:stretch;
+
+}
+
+
+
+.skill{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    transition:.35s;
+
+}
+
+
+
+.skill:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.skill h3{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.skills-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+
+.projects{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+    align-items:stretch;
+
+}
+
+
+
+.project-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:0.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+/* IMAGE */
+
+.project-image{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.project-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+/* TITLE */
+
+.project-card h3{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* DESCRIPTION */
+
+.project-card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+
+
+/* TECHNOLOGIES */
+
+.tech{
+
+    margin-top:20px;
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+
+.timeline div{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-left:5px solid var(--secondary);
+
+    margin-bottom:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+
+#contact{
+
+    text-align:center;
+
+}
+
+
+
+#contact p{
+
+    margin-bottom:35px;
+
+    font-size:20px;
+
+}
+
+/* =========================
+   CONTACT BUTTONS
+========================= */
+
+
+.contact-buttons{
+
+    margin-top:35px;
+
+}
+
+
+.contact-buttons a{
+
+    margin:10px;
+
+}
+
+/* =========================
+   SKILL DESCRIPTION
+========================= */
+
+.skill-description{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-top:15px;
+
+}
+
+
+
+/* =========================
+   KEY TECHNOLOGIES
+========================= */
+
+.skill h4{
+
+    margin-top:25px;
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+nav ul{
+
+    display:none;
+
+}
+
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.hero-card{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+
+
+section{
+
+    padding:60px 6%;
+
+}
+
+
+}
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:0.8s ease;
+
+}
+
+
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+/* ACTIVE MENU */
+
+nav a.active{
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+}
+.tech{
+
+    margin-top:18px;
+
+    color:var(--secondary) !important;
+
+    font-weight:700;
+
+    line-height:1.9;
+
+}
+
+@media(max-width:900px){
+
+    .projects{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
